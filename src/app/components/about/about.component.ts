@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InformacionService } from '../..//services/informacion.service'
+import 'rxjs/Rx'
 
 @Component({
   selector: 'app-about',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private informacionService:InformacionService) {
+    this.informacionService.carga_sobre_nosotros;
+   }
 
   ngOnInit() {
   }

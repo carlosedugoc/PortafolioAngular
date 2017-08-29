@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { InformacionService } from './services/informacion.service'
+import { ProductosService } from './services/productos.service'
 import 'rxjs/Rx'
 
 
@@ -9,7 +10,8 @@ import 'rxjs/Rx'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(public informacionService:InformacionService){
+  constructor(public informacionService:InformacionService,
+    public productosService:ProductosService){
     
   }
 }

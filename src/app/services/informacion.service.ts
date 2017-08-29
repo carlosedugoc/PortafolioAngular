@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http'
+import 'rxjs/Rx'
 
 @Injectable()
 export class InformacionService {
@@ -24,10 +25,19 @@ export class InformacionService {
     )
   }
 
+  // public carga_sobre_nosotros(){
+  //   this.http.get("https://webtemplate-ac160.firebaseio.com/equipo.json")
+  //   .subscribe( data =>{
+  //     console.log(data.json());
+  //     this.cargada_about=true;
+  //     this.equipo = data.json();
+  //   }
+  //   )
+  // }
+
   public carga_sobre_nosotros(){
-    this.http.get("https://webtemplate-ac160.firebaseio.com/equipo.json")
-    .subscribe( data =>{
-      console.log(data.json());
+    return this.http.get("https://webtemplate-ac160.firebaseio.com/equipo.json").map(
+data =>{
       this.cargada_about=true;
       this.equipo = data.json();
     }

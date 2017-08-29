@@ -10,7 +10,9 @@ import 'rxjs/Rx'
 export class AboutComponent implements OnInit {
 
   constructor(private informacionService:InformacionService) {
-    this.informacionService.carga_sobre_nosotros;
+    this.informacionService.carga_sobre_nosotros().subscribe(data =>{
+      
+    });
    }
 
   ngOnInit() {

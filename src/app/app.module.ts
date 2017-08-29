@@ -17,6 +17,7 @@ import { appRouting } from './app.routes'
 
 //servicios
 import { InformacionService } from './services/informacion.service'
+import { ProductosService } from './services/productos.service'
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { InformacionService } from './services/informacion.service'
     appRouting
   ],
   providers: [
-    InformacionService
+    InformacionService,
+    ProductosService
   ],
   bootstrap: [AppComponent]
 })

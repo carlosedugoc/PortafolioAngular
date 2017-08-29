@@ -4,7 +4,7 @@ import { AboutComponent, PortafolioComponent, PortafolioItemComponent } from './
 const routes: Routes = [
     { path: 'home', component: PortafolioComponent },
     { path: 'about', component: AboutComponent },
-    { path: 'producto', component: PortafolioItemComponent },
+    { path: 'producto/:id', component: PortafolioItemComponent },
     { path: '**', pathMatch:'full', redirectTo: 'homegi' }
 ];
 

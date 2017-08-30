@@ -28,11 +28,11 @@ public buscar_producto(termino:string){
   private filtrar_productos(termino:string){
       this.productos_filtrado = []
       console.log(termino)
-      termino = termino.toLocaleLowerCase()
+      termino = termino.toLowerCase()
       this.productos.forEach(prod=>{
-        console.log(prod)
+        // console.log(prod)
         
-        if(prod.categoria.toLocaleLowerCase().indexOf(termino) >= 0 || prod.titulo.toLocaleLowerCase().indexOf(termino) >= 0){
+        if(prod.categoria.toLowerCase().indexOf(termino) >= 0 || prod.titulo.toLowerCase().indexOf(termino) >= 0){
           this.productos_filtrado.push(prod)
         }
         
